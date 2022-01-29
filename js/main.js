@@ -1,4 +1,4 @@
-const API_KEY = '900eee3f4e6d3e40090ade1876b9fcc3'
+const API_KEY = 'API_KEY'
 const card = document.getElementById('card');           //  Grabs bootstrap card from index.html
 
 /**
