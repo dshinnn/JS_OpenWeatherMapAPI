@@ -1,3 +1,4 @@
+//  Quick access link to get API KEY https://home.openweathermap.org/api_keys
 const API_KEY = 'API_KEY'
 const card = document.getElementById('card');           //  Grabs bootstrap card from index.html
 
