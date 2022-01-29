@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <title>Weather API</title>
+    </head>
+    <body class=bg-light>
+        
+        <div class="container text-center">
+            <div class="card mx-auto mt-5 w-25 border border-dark p-3" style="width:18rem; visibility: hidden;" id="card">
+                <h4 class="card-title" id="card-title"></h4>
+                <img src="" alt="" class="card-img-top w-50 mx-auto" id="card-img">
+                <div class="card-body">
+                    <h5 class="card-text" id="card-temp"></h5>
+                    <h6 class="card-text" id="card-text"></h6>
+                </div>
+                <ul class="list-group list-group-flush" id="card-ul">
+                    <li class="list-group-item text-start" id="li-1"></li>
+                    <li class="list-group-item text-start" id="li-2"></li>
+                    <li class="list-group-item text-start" id="li-3"></li>
+                    <li class="list-group-item text-start" id="li-4"></li>
+                </ul>
+            </div>
+
+            <form action="" id='weatherForm' class="form-group mt-5 w-50 mx-auto border border-secondary p-5">
+                <fieldset class="mt-3">
+                    <label for="city">Enter City: </label>
+                    <input type="text" name="city" id="city" class="form-control">
+                </fieldset>
+                <fieldset class="mt-3">
+                    <label for="zipcode">Enter Zipcode: </label>
+                    <input type="text" name="zipcode" id="zipcode" class="form-control">
+                </fieldset>
+                <input type="submit" value="Search" class="mt-3">
+            </form>
+        </div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
