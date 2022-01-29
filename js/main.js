@@ -23,17 +23,20 @@ const getAPIData = async (city, zipcode=null) => {
 const displayData = async (data, city) => {
     data = await data;
 
+    //  Grabs all the HTML elements that will be updated
     let img = document.getElementById('card-img');
     let li1 = document.getElementById('li-1');
     let li2 = document.getElementById('li-2');
     let li3 = document.getElementById('li-3');
     let li4 = document.getElementById('li-4');
 
+    //  Changes card main text
     document.getElementById('card-title').innerText = await city.charAt(0).toUpperCase() + city.substr(1, city.length-1);
     img.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
     document.getElementById('card-temp').innerText = parseInt(data.main.temp) + '\u2109';
     document.getElementById('card-text').innerHTML = `<em>Feels like: ${parseInt(data.main.feels_like)}'\u2109'</em>`;
 
+    //  Changes list elements in the card
     li1.innerHTML = `<strong>High:</strong> ${parseInt(data.main.temp_max)}'\u2109'`
     li2.innerHTML = `<strong>Low:</strong> ${parseInt(data.main.temp_min)}'\u2109'`
     li3.innerHTML = `<strong>Pressure:</strong> ${parseInt(data.main.pressure)} psia`
