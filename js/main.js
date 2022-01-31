@@ -1,5 +1,5 @@
 //  Quick access link to get API KEY https://home.openweathermap.org/api_keys
-const API_KEY = 'API KEY GOES HERE'
+const API_KEY = ''
 const card = document.getElementById('card');           //  Grabs bootstrap card from index.html
 
 /**
@@ -9,7 +9,7 @@ const card = document.getElementById('card');           //  Grabs bootstrap card
  * Function grabs user-inputted city and zipcode and returns a JSON data file 
  */
 const getAPIData = async (city, zipcode=null) => {
-    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zipcode=${zipcode},us&q=${city}&appid=${API_KEY}&units=imperial`);
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&q=${city}&appid=${API_KEY}&units=imperial`);
     let data = await response.json();
     return await data;
 }
